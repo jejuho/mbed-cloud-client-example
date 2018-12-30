@@ -134,7 +134,7 @@ foreach(TEST_LIB ${TEST_LIBS})
     endif()
 
 
-    if (${OS_BRAND} MATCHES Linux)
+    if (${OS_BRAND} MATCHES Linux OR ${OS_BRAND} MATCHES AmigaOS)
         target_link_libraries(${TEST_LIB}.elf optimized rt)
         target_link_libraries(${TEST_LIB}.elf debug rt)
         target_link_libraries(${TEST_LIB}.elf optimized pthread)
@@ -145,7 +145,7 @@ foreach(TEST_LIB ${TEST_LIBS})
 		TARGET_LINK_LIBRARIES(${TEST_LIB}.elf -Wl,--end-group)
 	endif()
 
-    if (NOT (${OS_BRAND} MATCHES "Linux"))
+    if (NOT (${OS_BRAND} MATCHES "Linux" OR ${OS_BRAND} MATCHES "AmigaOS"))
         ELF_TO_BIN(${TEST_LIB} ${EXECUTABLE_OUTPUT_PATH})
     endif()
 

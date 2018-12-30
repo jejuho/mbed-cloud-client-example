@@ -1,0 +1,6 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ m68k_AmigaOS_mbedtls ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##################
+# mbedtls 2.16.0
+##################
+- Clone https://github.com/jejuho/mbedtls.git at master to /home/milk/mbed-cloud-client-example/pal-platform/Middleware/mbedtls/mbedtls

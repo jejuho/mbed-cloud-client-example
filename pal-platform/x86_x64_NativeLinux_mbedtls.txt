@@ -1,0 +1,6 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ x86_x64_NativeLinux_mbedtls ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##################
+# mbedtls 2.15.1
+##################
+- Clone https://github.com/ARMmbed/mbedtls.git at mbedtls-2.15.1 to /home/milk/mbed-cloud-client-example/pal-platform/Middleware/mbedtls/mbedtls

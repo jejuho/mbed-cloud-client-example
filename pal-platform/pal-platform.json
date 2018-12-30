@@ -99,5 +99,25 @@
         "to": "Middleware/mbedtls/mbedtls"
       }
     }
+  },
+  "m68k_AmigaOS_mbedtls":
+  {
+    "device": {
+      "name": "m68k"
+    },
+    "os": {
+      "name": "AmigaOS"
+    },
+    "middleware": {
+      "mbedtls": {
+        "version": "2.16.0",
+        "from": {
+          "protocol": "git",
+          "location": "https://github.com/jejuho/mbedtls.git",
+          "branch": "amigaos_support"
+        },
+        "to": "Middleware/mbedtls/mbedtls"
+      }
+    }
   }
 }
