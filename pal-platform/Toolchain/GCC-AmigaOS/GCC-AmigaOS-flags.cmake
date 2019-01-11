@@ -114,16 +114,16 @@ SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-fno-common")
 SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-ffreestanding")
 SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-fno-builtin")
 # SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-mapcs")
-SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-std=gnu++98")
+# SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-std=gnu++98")
 SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-fno-rtti")
 #
 #####################################
 
-SET_COMPILER_DBG_RLZ_FLAG (CMAKE_C_FLAGS "-specs=/home/milk/m68k-amigaos-specs")
-SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-specs=/home/milk/m68k-amigaos-specs")
+# SET_COMPILER_DBG_RLZ_FLAG (CMAKE_C_FLAGS "-specs=/home/milk/m68k-amigaos-specs")
+# SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "-specs=/home/milk/m68k-amigaos-specs")
 
-# SET_COMPILER_DBG_RLZ_FLAG (CMAKE_C_FLAGS "@${CMAKE_SOURCE_DIR}/include_file.txt")
-# SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "@${CMAKE_SOURCE_DIR}/include_file.txt")
+SET_COMPILER_DBG_RLZ_FLAG (CMAKE_C_FLAGS "@${CMAKE_SOURCE_DIR}/include_file.txt")
+SET_COMPILER_DBG_RLZ_FLAG (CMAKE_CXX_FLAGS "@${CMAKE_SOURCE_DIR}/include_file.txt")
 
 ########### DEBUG ###########
 # Debug specific

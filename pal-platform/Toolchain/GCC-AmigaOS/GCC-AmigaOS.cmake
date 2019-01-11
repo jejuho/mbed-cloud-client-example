@@ -39,7 +39,7 @@ STRING(REGEX REPLACE "\\\\" "/" TOOLCHAIN_DIR "${TOOLCHAIN_DIR}")
 
 IF(NOT TOOLCHAIN_DIR)
     # MESSAGE(FATAL_ERROR "***Please set TOOLCHAIN_DIR in envionment variables***")
-    set(TOOLCHAIN_DIR "/opt/m68k-amigaos")
+    set(TOOLCHAIN_DIR "/opt/m68k-amigaos-beppo")
 ENDIF()
 
 MESSAGE(STATUS "TOOLCHAIN_DIR: " ${TOOLCHAIN_DIR})
