@@ -21,7 +21,7 @@
 #include "mcc_common_config.h"
 #include "mcc_common_button_and_led.h"
 
-#include <pthread.h>
+#include <pal_plat_rtos.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -35,12 +35,12 @@ static volatile int button_pressed = 0;
 typedef void (*signalhandler_t)(int);
 static void handle_signal(void);
 
-pthread_t resource_thread;
+palThreadID_t resource_thread;
 
 static void handle_signal(void)
 {
 #if PLATFORM_ENABLE_BUTTON
-    pthread_detach(resource_thread);
+    pal_plat_osThreadTerminate(&resource_thread);
 #endif
     exit(0);
 }
@@ -70,7 +70,7 @@ void *button_thread(void *arg)
 uint8_t mcc_platform_init_button_and_led(void)
 {
 #if PLATFORM_ENABLE_BUTTON
-    pthread_create(&resource_thread, NULL, &button_thread, NULL);
+    pal_plat_osThreadCreate(&button_thread, NULL, PAL_osPriorityNormal, 512, &resource_thread);    
 #endif
     signal(SIGTERM, (signalhandler_t)handle_signal);
     return 0;
