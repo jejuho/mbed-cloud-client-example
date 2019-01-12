@@ -155,7 +155,7 @@ int mcc_platform_reformat_storage(void)
 // to do:
 // PAL_FS_MOUNT_POINT_PRIMARY 
 // PAL_FS_MOUNT_POINT_SECONDARY 
-    printf("mcc_platform_reformat_storage does not support Linux!!!\n");
+    printf("mcc_platform_reformat_storage does not support AmigaOS!!!\n");
     return 0;
 }
 
