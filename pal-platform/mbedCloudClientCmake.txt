@@ -141,9 +141,10 @@ foreach(TEST_LIB ${TEST_LIBS})
         target_link_libraries(${TEST_LIB}.elf debug pthread)
     endif ()
 
-    # if (${OS_BRAND} MATCHES AmigaOS)
-    #     target_link_libraries(${TEST_LIB}.elf)
-    # endif ()
+    if (${OS_BRAND} MATCHES AmigaOS)
+         target_link_libraries(${TEST_LIB}.elf optimized c)
+         target_link_libraries(${TEST_LIB}.elf debug c)
+    endif ()
 
 	if (CMAKE_C_COMPILER_ID STREQUAL "GNU")
 		TARGET_LINK_LIBRARIES(${TEST_LIB}.elf -Wl,--end-group)
