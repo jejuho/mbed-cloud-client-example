@@ -38,6 +38,13 @@ static void *network_interface;
 // PAL_NET_DEFAULT_INTERFACE 0xFFFFFFFF
 static unsigned int network=0xFFFFFFFF;
 
+void __assert_func(const char *file, int line, const char *func, const char *failedExpr)
+{
+    printf("ASSERT ERROR \" %s \": file \"%s\" Line \"%d\" function name \"%s\" \n", failedExpr, file, line, func);
+    for (;;)
+    {}
+}
+
 ////////////////////////////////
 // SETUP_COMMON.H IMPLEMENTATION
 ////////////////////////////////
